@@ -1,110 +1,114 @@
-/* Estilos generales */
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #d9f7d9;
-    color: #222;
-}
-
-/* Encabezado */
-header {
-    background-color: #176b3a;
-    color: white;
+    font-family: Arial, sans-serif;
     text-align: center;
-    padding: 30px 15px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+header {
+    background-color: darkgreen;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header p {
+#hero {
+    height: 30vh;
+    background-image:
+        linear-gradient(rgba(0, 80, 0, 0.5), rgba(0, 80, 0, 0.5)),
+        url("img/johan.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+#hero h1 {
+    font-size: 45px;
+    margin: 5px;
+}
+
+#hero p {
     font-size: 18px;
 }
 
-/* Menú de navegación */
-nav {
-    background-color: #0f4d2b;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+main {
+    max-width: 900px;
+    margin: 30px auto;
     padding: 10px;
 }
 
-nav a {
-    color: white;
+.foto-johan {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid darkgreen;
+}
+
+main h2 {
+    color: darkgreen;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.menu a {
+    width: 180px;
+    color: darkgreen;
     text-decoration: none;
-    padding: 10px 14px;
-    margin: 4px;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-nav a:hover {
-    background-color: #4caf50;
+.menu img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 8px;
 }
 
-/* Contenido principal */
-main {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
+.menu a:hover img {
+    opacity: 0.7;
 }
 
-/* Secciones */
-section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+.menu a:hover {
+    color: black;
 }
 
-section h2 {
-    color: #176b3a;
-    text-align: center;
-}
-
-section p {
-    line-height: 1.6;
-    font-size: 17px;
-}
-
-/* Pie de página */
 footer {
-    background-color: #0f4d2b;
+    background-color: darkgreen;
     color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 15px;
     margin-top: 30px;
 }
 
-/* Diseño para celulares */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-    header h1 {
-        font-size: 26px;
+    #hero h1 {
+        font-size: 32px;
     }
 
-    nav {
+    .foto-johan {
+        width: 180px;
+        height: 180px;
+    }
+
+    .menu {
         flex-direction: column;
         align-items: center;
-    }
-
-    nav a {
-        width: 90%;
-        text-align: center;
-    }
-
-    main {
-        width: 95%;
-    }
-
-    section {
-        padding: 18px;
     }
 }
